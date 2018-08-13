@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/surveys/answers/<%= survey.id %>" method="post" novalidate>
+    <fieldset>
+      <legend><%= survey.title %></legend>
+
+
+      <div class="form-group">
+        <label for="answer1"><%= survey.question1 %></label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">*</div>
+          </div>
+        <input type="text" class="form-control" id="answer1" name="answer1" placeholder="Gender" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="answer2"><%= survey.question2 %></label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">*</div>
+        </div>
+      <input type="text" class="form-control" id="answer2" name="answer2" placeholder="Age" required >
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="answer3"><%= survey.question3 %></label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">*</div>
+      </div>
+    <input type="text" class="form-control" id="answer3" name="answer4" placeholder="Weight" required >
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="answer4"><%= survey.question4 %></label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <div class="input-group-text">*</div>
+    </div>
+  <input type="text" class="form-control" id="answer4" name="answer4" placeholder="Interest" required >
+</div>
+</div>
+    </fieldset>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Answer Survey</button>
+    </div>
+  </form>
+</section>
+
+<% include ../partials/footer %>
